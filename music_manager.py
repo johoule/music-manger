@@ -20,8 +20,7 @@
 
 # 1. Include all necessary imports here.
 import json
-
-
+from pprint import pprint
 
 # Global variables. Do not change the names of the globals in template.
 
@@ -37,8 +36,11 @@ data_file = 'music.json'
 #    Once the list is loaded, display a message stating the number of
 #    contacts that were loaded.
 def load():
-    pass
-
+    with open(data_file, 'r') as f:
+        records = json.load(f)
+        pprint(records)
+        pprint(records[0])
+        
 
 # 3. Write the records to a json file. Be sure to use 'pretty printing'
 #    when you convert the data to a string. Once the list is saved, display
