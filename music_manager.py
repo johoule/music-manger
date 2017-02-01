@@ -40,7 +40,9 @@ def load():
         records = json.load(f)
         pprint(records)
         pprint(records[0])
+        print(str(len(records)) + " songs were loaded.")
         
+        pprint(records[18]['Song Title'])
 
 # 3. Write the records to a json file. Be sure to use 'pretty printing'
 #    when you convert the data to a string. Once the list is saved, display
