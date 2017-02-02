@@ -1,0 +1,51 @@
+[{
+	"Name": "Spooky Scary Skeletons",
+	"year": "1996",
+	"Artist": "Andrew Gold",
+    "Link": "https://www.youtube.com/watch?v=XTgFtxHhCQ0"
+}, {
+	"Name": "Actual Canibal Shia LaBeouf",
+	"Year": "2012",
+	"Artist": "Rob Cantor",
+	"Link": "https://www.youtube.com/watch?v=o0u4M6vppCI"
+}, {
+	"Name": "Sanic Theme",
+	"Year": "2014",
+	"Artist": "Brandon Lee",
+	"Link": "https://www.youtube.com/watch?v=PX7zPlQjAr8"
+}, {
+	"Name": "Here In My Garage Remix",
+	"Year": "2015",
+	"Artist": "Tai Lopez",
+	"Link": "https://www.youtube.com/watch?v=8u3SuPzx39c"
+}, {
+	"Name": "Harry Potter and The Mysterious Ticking Noise",
+	"Year": "2007",
+	"Artist": "Neil Cicierega",
+	"Link": "https://www.youtube.com/watch?v=zympssdASVo"
+}, {
+	"Name": "Bring Me To Life",
+	"Year": "2003",
+	"Artist": "Kidz Bop",
+	"Link": "https://www.youtube.com/watch?v=dfyNnUgK8qE"
+}, {
+	"Name": "Mom's Spegetti",
+	"Year": "2002",
+	"Artist": "Eminem",
+	"Link": "https://www.youtube.com/watch?v=SW-BU6keEUw"
+}, {
+	"Name": "Darude Sandstorm",
+	"Year": "2000",
+	"Artist": "Darude",
+	"Link": "https://www.youtube.com/watch?v=2HQaBWziYvY"
+}, {
+	"Name": "Hips Don't Lie Banjo Version",
+	"Year": "2014",
+	"Artist": "Pain OfTheRain",
+	"Link": "https://www.youtube.com/watch?v=8KRu1v78Nco"
+}, {
+	"Name": "EMSpectrum",
+	"Year": "2009",
+	"Artist": "The Bonas Point Band",
+	"Link": "https://www.youtube.com/watch?v=ZPwG4zZNOu4"
+}]

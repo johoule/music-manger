@@ -117,7 +117,7 @@ def delete(n):
 #     print statements. You will be graded on the clarity, quaility, and
 #     neatness of your instructions.
 def help():
-    pass
+    print("Instructions")
 
 
 # Start the program.
