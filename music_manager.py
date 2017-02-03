@@ -28,6 +28,10 @@ records = []   # list of all contacts
 keys = ['Song Title', 'Artist', 'Album', 'Track #', 'Song length',
         'Release Year', 'Publisher', 'Playlist Track #']
 data_file = 'music.json'
+with open(data_file) as n:
+    songlist = n.read()
+    song_set = []
+    song_set = json.loads(songlist)
 
 
 
@@ -38,11 +42,13 @@ data_file = 'music.json'
 def load():
     with open(data_file, 'r') as f:
         records = json.load(f)
-        pprint(records)
-        pprint(records[0])
+        #pprint(records)
+        #pprint(records[0])
         print(str(len(records)) + " songs were loaded.")
         
-        pprint(records[18]['Song Title'])
+        
+
+    
 
 # 3. Write the records to a json file. Be sure to use 'pretty printing'
 #    when you convert the data to a string. Once the list is saved, display
@@ -62,7 +68,41 @@ def save():
 #    through keys rather than explicitly accessing each dictionary
 #    element.
 def display_record(contact):
-    pass
+    
+    for i in song_set:
+        if 'Song Title' in i:
+            song_title = i['Song Title']
+            if song_title == contact:
+                if 'Artist' in i:
+                    artist = i['Artist']
+                if 'Album' in i:
+                    album = i['Album']
+                if 'Track #' in i:
+                    tracknum = i['Track #']
+                if 'Song length' in i:
+                    songlength = i['Song length']
+                if 'Release Year' in i:
+                    release_year = i['Release Year']
+                if 'Publisher' in i:
+                    publisher = i['Publisher']
+                if 'Playlist Track #' in i:
+                    playlistnum = i['Playlist Track #']
+                break
+                
+
+       
+    
+    print("Song: " + song_title)
+    print("Artist: " + artist)
+    print("Album: " + album)
+    print("Track #: " + tracknum)
+    print("Song Length: " + songlength)
+    print("Release Year: " + release_year)
+    print("Publisher: " + publisher)
+    print("Playlist Track #: " + playlistnum)
+    print()
+    
+    
 
 
 
@@ -71,7 +111,19 @@ def display_record(contact):
 #    function for each contact. To make the ouput easier to read,
 #    include a blank print statement after each record is displayed.
 def all():
-    pass
+    '''for i in song_set:
+        if 'Song Title' in i:
+            song_title = i['Song Title']
+            display_record(song_title)'''
+    for num, song in enumerate(song_set):
+        n = num
+        if 'Song Title' in song:
+            song_title = song['Song Title']
+            print(n)
+            display_record(song_title)
+            
+            
+    
 
 
 
@@ -80,7 +132,17 @@ def all():
 #    than including print statements in this function.
 def find(query):
     print('Records matching "' + query + '"')
-
+    find_list = []
+    for i in song_set:
+        if 'Song Title' in i:
+            song_title = i['Song Title']
+            if song_title == query:
+                find_list.append(i)
+        if 'Artist' in i:
+            artist = i['Artist']
+            if artist == query:
+                find_list.append(i)
+    print(find_list)
 
 
 # 7. Add should prompt the user to enter new contact data for all keys.
@@ -108,6 +170,9 @@ def add():
 #    deleted.' should be displayed. If the user attempts to delete a record
 #    that does not exist, then an error message should be displayed.
 def delete(n):
+    #song_list = [
+    #with open(data_file, 'w') as f:
+        
     pass
 
 
@@ -118,7 +183,21 @@ def delete(n):
 #     neatness of your instructions.
 def help():
     print("Instructions")
-
+    print("1) save() ")
+    print()
+    print("2) display_record() ")
+    print("   - to use the display record function \n  you type in display_record() and then \n  between the prethesis you type the name \n  of the song you are looking for with \n  correct capital lettering. You also \n  have to surrond the song with double quotes.")
+    print()
+    print("3) all() ")
+    print("   - This function gives you the entire \n  list of songs. To use this function you \n  type all().")
+    print()
+    print("4) find() ")
+    print()
+    print("5) add() ")
+    print()
+    print("6) delete() ")
+    print()
+    
 
 # Start the program.
 print('Contact Manager started.')
@@ -140,6 +219,9 @@ a. Test your help function.
 b. Enter the all() command in the shell to test that all contacts
    have been loaded and that your display_record function shows data
    nicely.
+
+   check
+
 
 c. Test your search function. Be sure to try a few different queries.
    Make sure your search doesn't display duplicate contacts. Example
